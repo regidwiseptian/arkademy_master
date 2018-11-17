@@ -32,4 +32,4 @@ Author :
 
 # Author :
  Nama			      : Regi Dwi Septian
- Asal Sekolah 	: Universitas Pakuan
+ <br>Asal Sekolah 	: Universitas Pakuan
