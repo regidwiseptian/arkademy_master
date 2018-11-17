@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soal 2 - Verifikasi Valid Password</title>
+</head>
+<body>
+
+<script>
+        const VALIDASI = () => {
+            var nilai = document.formSubmit.password.value;
+            var FormatPassword = /^[A-Za-z]{5,6}[_,.][A-Za-z]{1,2}$/;
+            
+            if ( nilai === ""){
+                alert('Mohon Masukan Password Anda !');
+                document.formSubmit.password.focus();
+                return false;
+            }
+    
+            var cek = FormatPassword.test(nilai);
+            if (!cek) {
+                alert('Mohon Masukan Password Sesuai Format !');
+            } else {
+                alert('Password Diterima');
+            }
+        };
+</script>
+
+<form name="formSubmit" onsubmit="return(VALIDASI());">
+    <table>
+        <tr>
+            <td>Password: </td>
+            <td><input type="text" name="password" placeholder="Masukan Password" /></td>
+            <td><input type="submit" value="Submit" /></td>
+        </tr>
+    </table>
+    
+    <ul> Format :
+        <li>Berjumlah delapan karakter</li>
+        <li>Setidaknya terdapat sebuah huruf kecil, sebuah huruf besar dan sebuah karakter spesial</li>
+    </ul>
+
+    <ul>Contoh valid password adalah 
+    <li>Qwerty_A</li>
+    <li>ssdga_AA</li>
+    <li>SUPER.oi</li>
+    </ul>
+</form>
+
+</body>
+</html>
